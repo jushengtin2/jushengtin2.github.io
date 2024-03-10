@@ -1,5 +1,5 @@
 // pages/index.js
-import hellocss from '/styles/Home.module.css'
+import hellocss from '../styles/Home.module.css'
 
 import React from "react";
 import Button from '@mui/material/Button';
