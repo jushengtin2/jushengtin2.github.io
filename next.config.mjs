@@ -6,7 +6,7 @@ const nextConfig = {
   output: isProd ? 'export' : undefined,
   reactStrictMode: true,
   assetPrefix: isProd
-    ? 'https://jushengtin2.github.io/jushengtin2.github.io/'
+    ? 'https://jushengtin2.github.io/'
     : undefined
 }
 export default nextConfig
