@@ -2,9 +2,9 @@
 
 
 .body {
-    background-color: #f6f1da;
+    background-color: #EBDEBE;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     height: 100vh;
     width: 100vw;
@@ -14,25 +14,53 @@
   }
 
 .qq {
-    background-color: #f6f1da;
+    background-color: #EBDEBE;
     font-family: 'Jockey One';
     margin: auto;
     
     text-align: center;
     letter-spacing: 3px; 
-    width: 100vw;
-    height: 55vh;
+    width: 60vw;
+    height: 100vh;
     display: flex; 
     justify-content: center; 
     align-items: center; 
     position: relative; 
 }
 
-.title {
+.title1 {
     position: absolute; 
-    top: 65%; 
+    top: 40%; 
+    left: 22%;
     transform: translateY(-50%);
-    font-size: 90px; 
+    font-size: 95px; 
+}
+.title2 {
+  position: absolute; 
+  top: 60%; 
+  left: 22%;
+  transform: translateY(-50%);
+  font-size: 95px; 
+}
+.title3 {
+  position: absolute; 
+  top: 80%; 
+  left: 22%;
+  transform: translateY(-50%);
+  font-size: 95px; 
+  z-index: 10;
+}
+
+
+
+
+
+.divv {
+  background-color: #EBDEBE;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .button_img{
@@ -43,49 +71,46 @@
   object-fit: cover;
   position: absolute;
   top: 0;
-  border-radius: 20px;
+  border-radius: 50px;
 } 
 
-.divv {
-    background-color: #f6f1da;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-  }
   
-.overlap {
-    background-color: #f6f1da;
-    height: 60%;
-    width: 30%;
-    z-index: 10;
-    position: relative;
-    left: 2.5%;
-    top: 10%;
-    border-radius: 20px;
-  
-  }
-
-  .overlapgroup {
-    background-color: #1f1e18;
-    height: 60%;
-    width: 30%;
+.overlap1 {
+    background-color: #b0aeae;
+    height: 27%;
+    width: 80%;
     z-index: 10;
     position: relative;
     left: 5%;
-    top: 10%;
-    border-radius: 20px;
-  }
+    top: 4%;
+    border-radius: 50px;
+    margin-bottom: 8%;
+    
   
+  }
+
   .overlap2 {
-    background-color: #1f1e18;
-    height: 60%;
-    width: 30%;
+    background-color: #b0aeae;
+    height: 27%;
+    width: 80%;
     z-index: 10;
     position: relative;
-    left: 7.5%;
-    top: 10%;
-    border-radius: 20px;
+    left: 5%;
+    top: 4%;
+    border-radius: 50px;
+    margin-bottom: 8%;
+  }
+  
+  .overlap3 {
+    background-color: #b0aeae;
+    height: 27%;
+    width: 80%;
+    z-index: 10;
+    position: relative;
+    left: 5%;
+    top: 4%;
+    border-radius: 50px;
+    
   }
   
 .rectangle {
@@ -95,17 +120,17 @@
     object-fit: cover;
     position: absolute;
     top: 0;
-    border-radius: 20px;
-    background-color: #9d9a9a;
+    border-radius: 50px;
+    background-color: #b0aeae;
    
   }
   
 .frame {
-    background-color: #f6f1da;
-    height: 15%;
+    background-color: #EBDEBE;
+    height: 20%;
     left: 30%;
     position: absolute;
-    bottom: 0%;
+    bottom: -2%;
     width: 70%;
     
     
@@ -114,7 +139,7 @@
  .textwrapper {
     color: #000000;
     font-family: 'Jockey One';
-    font-size: 1.6em;
+    font-size: 2em;
     font-weight: 400;
     height: 100%;
     left: 0;
@@ -122,7 +147,7 @@
     line-height: normal;
     position: absolute;
     text-align: center;
-    top: 15px;
+    top: 3px;
     white-space: nowrap;
     width: 100%;
   }
@@ -137,5 +162,39 @@
       }
   }
 }
+
+  .circle{
+    position: absolute;
+    top: -20%;
+    left: 25%;
+    width: 490px; /* 圆形的宽度 */
+    height: 490px; /* 圆形的高度，和宽度相同以创建圆形 */
+    border-radius: 50%; /* 创建圆形 */
+    background-color: #F1BC00; /* 圆形的填充颜色 */
+
+  }
+
+  .triangle{
+    position: absolute;
+    top: 37%;
+    left: 5%;
+    width: 288.5px; /* 可调整大小 */
+    height: 250px; /* 保持和宽度一样 */
+    background-color: #0368BD; /* 三角形的颜色 */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+
+  .red_rectangle{
+    position: absolute;
+    top: 78.9%;
+    left: 23.5%;
+    width: 400px; /* 长条形的宽度 */
+    height: 45px; /* 长条形的高度 */
+    background-color: #c40606; 
+    z-index: 0;
+  }
+
 
   
