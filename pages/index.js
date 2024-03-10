@@ -11,7 +11,7 @@ function Home() {
       
       <div className={hellocss.qq}>
         <div className={hellocss.title}>WELCOME TO MY WEB</div>
-      </div>s
+      </div>
 
       <div className={hellocss.divv}>
 
