@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+
+.body {
+    background-color: #f6f1da;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+.qq {
+    background-color: #f6f1da;
+    font-family: 'Jockey One';
+    margin: auto;
+    
+    text-align: center;
+    letter-spacing: 3px; 
+    width: 100vw;
+    height: 55vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+}
+
+.title {
+    position: absolute; 
+    top: 65%; 
+    transform: translateY(-50%);
+    font-size: 90px; 
+}
+
+.button_img{
+  background-color: #9d9a9a; 
+  height: 100%;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+} 
+
+.divv {
+    background-color: #f6f1da;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+  
+.overlap {
+    background-color: #f6f1da;
+    height: 60%;
+    width: 30%;
+    z-index: 10;
+    position: relative;
+    left: 2.5%;
+    top: 10%;
+    border-radius: 20px;
+  
+  }
+
+  .overlapgroup {
+    background-color: #1f1e18;
+    height: 60%;
+    width: 30%;
+    z-index: 10;
+    position: relative;
+    left: 5%;
+    top: 10%;
+    border-radius: 20px;
+  }
+  
+  .overlap2 {
+    background-color: #1f1e18;
+    height: 60%;
+    width: 30%;
+    z-index: 10;
+    position: relative;
+    left: 7.5%;
+    top: 10%;
+    border-radius: 20px;
+  }
+  
+.rectangle {
+    height: 100%;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+    background-color: #9d9a9a;
+   
+  }
+  
+.frame {
+    background-color: #f6f1da;
+    height: 15%;
+    left: 30%;
+    position: absolute;
+    bottom: 0%;
+    width: 70%;
+    
+    
+  }
+  
+ .textwrapper {
+    color: #000000;
+    font-family: 'Jockey One';
+    font-size: 1.6em;
+    font-weight: 400;
+    height: 100%;
+    left: 0;
+    letter-spacing: 3px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 15px;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+@media screen and (max-width: 720px) {
+    .textwrapper {
+        font-size: 20px; /* 在小屏幕上使用不同的字体大小 */
+    }
+@media screen and (max-width: 450px) {
+      .textwrapper {
+          font-size: 12px; /* 在更小的屏幕上使用更小的字体大小 */
+      }
+  }
+}
+
+  
