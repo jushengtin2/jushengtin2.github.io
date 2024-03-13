@@ -9,13 +9,13 @@ function Aboutme() {
     return (
       <div className={styles.body}>
         <div className={styles.piczone}>
-            <Image src='https://i.ibb.co/RjzH6Bp/S-3981318.jpg'className={styles.mypic} >
+            <Image src='https://i.ibb.co/RjzH6Bp/S-3981318.jpg'className={styles.mypic}  />
             <div className={styles.rectangle}></div>
         </div>
 
         <div className={styles.introzone}>
             <div className={styles.intro}>
-                Hello!!! I'm Justin, 23yo from Kaohsiung Taiwan 🇹🇼 and currently pursuing a Master's degree in Information Management at National Taiwan University, I'm a member of Professor Nanyi's research lab and currently researching HCI (Human-Computer Interaction).
+               
             </div>
             <div className={styles.circle}></div>
         </div>
