@@ -11,21 +11,29 @@
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
   }
 
 .qq {
     background-color: #EBDEBE;
     font-family: 'Jockey One';
-    margin: auto;
-    
     text-align: center;
     letter-spacing: 3px; 
     width: 60vw;
     height: 100vh;
     display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    flex-direction: column;
     position: relative; 
+    
+}
+
+.divv {
+  background-color: #EBDEBE;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .title1 {
@@ -34,6 +42,7 @@
     left: 22%;
     transform: translateY(-50%);
     font-size: 95px; 
+    z-index: 20;
 }
 .title2 {
   position: absolute; 
@@ -41,6 +50,7 @@
   left: 22%;
   transform: translateY(-50%);
   font-size: 95px; 
+  z-index: 15;
 }
 .title3 {
   position: absolute; 
@@ -48,20 +58,10 @@
   left: 22%;
   transform: translateY(-50%);
   font-size: 95px; 
-  z-index: 10;
+  z-index: 15;
 }
 
 
-
-
-
-.divv {
-  background-color: #EBDEBE;
-  width: 40vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
 .button_img{
   background-color: #9d9a9a; 
@@ -79,13 +79,12 @@
     background-color: #b0aeae;
     height: 27%;
     width: 80%;
-    z-index: 10;
+    z-index: 20;
     position: relative;
     left: 5%;
-    top: 4%;
+    top: 4.75%;
     border-radius: 50px;
-    margin-bottom: 8%;
-    
+    margin-bottom: auto;
   
   }
 
@@ -93,23 +92,24 @@
     background-color: #b0aeae;
     height: 27%;
     width: 80%;
-    z-index: 10;
+    z-index: 20;
     position: relative;
     left: 5%;
-    top: 4%;
+    top: 0;
     border-radius: 50px;
-    margin-bottom: 8%;
+    margin-bottom: auto;
   }
   
   .overlap3 {
     background-color: #b0aeae;
     height: 27%;
     width: 80%;
-    z-index: 10;
+    z-index: 20;
     position: relative;
     left: 5%;
-    top: 4%;
+    bottom: 4.75%;
     border-radius: 50px;
+    
     
   }
   
@@ -130,10 +130,9 @@
     height: 20%;
     left: 30%;
     position: absolute;
-    bottom: -2%;
-    width: 70%;
-    
-    
+    bottom: 0;
+    width: 70%; 
+
   }
   
  .textwrapper {
@@ -152,48 +151,169 @@
     width: 100%;
   }
 
-@media screen and (max-width: 720px) {
-    .textwrapper {
-        font-size: 20px; /* 在小屏幕上使用不同的字体大小 */
-    }
-@media screen and (max-width: 450px) {
-      .textwrapper {
-          font-size: 12px; /* 在更小的屏幕上使用更小的字体大小 */
-      }
-  }
-}
-
   .circle{
     position: absolute;
-    top: -20%;
-    left: 25%;
-    width: 490px; /* 圆形的宽度 */
-    height: 490px; /* 圆形的高度，和宽度相同以创建圆形 */
+    top: -250%;
+    left: 10%;
+    width: 150%; /* 圆形的宽度 */
+    height: 390%; /* 圆形的高度，和宽度相同以创建圆形 */
     border-radius: 50%; /* 创建圆形 */
     background-color: #F1BC00; /* 圆形的填充颜色 */
+    z-index: -10;
 
   }
 
   .triangle{
     position: absolute;
-    top: 37%;
-    left: 5%;
-    width: 288.5px; /* 可调整大小 */
-    height: 250px; /* 保持和宽度一样 */
+    top: -50%;
+    left: -100%;
+    width: 235% ;/* 可调整大小 */
+    height: 150%;/* 保持和宽度一样 */
     background-color: #0368BD; /* 三角形的颜色 */
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     transform: rotate(-45deg);
     transform-origin: center;
+    z-index: -10;
   }
 
   .red_rectangle{
     position: absolute;
-    top: 78.9%;
-    left: 23.5%;
-    width: 400px; /* 长条形的宽度 */
-    height: 45px; /* 长条形的高度 */
+    top: 47%;
+    left: 3%;
+    width: 160%; /* 长条形的宽度 */
+    height: 30%; /* 长条形的高度 */
     background-color: #c40606; 
-    z-index: 0;
+    z-index: -10;
+  }
+
+
+@media screen and (max-width: 850px) {
+    .textwrapper {
+        font-size: 25px; /* 在小屏幕上使用不同的字体大小 */
+    }
+    .title1{
+      font-size: 70px;
+      left: 20%;
+
+    }
+    .title2{
+      font-size: 70px;
+      left: 20%;
+    }
+    .title3{
+      font-size: 70px;
+      left: 20%;
+    }
+
+    .body{
+      flex-direction: column;
+    }
+    .qq{
+      width: 100vw;
+      height: 50vh;
+    }
+    .divv{
+      width: 100vw;
+      height: 50vh;
+    }
+    .overlap1{
+      width: 65%;
+      left: 17.5%;
+      margin-bottom: auto;
+    }
+    .overlap2{
+      width: 65%;
+      left: 17.5%;
+      margin-bottom: auto;
+    }
+    .overlap3{
+      width: 65%;
+      left: 17.5%
+    }
+    .frame{
+      position: absolute;
+      bottom: -1%;
+      width: 50%; 
+      height: 30%;
+      left: 50%;
+    }
+    .circle{
+      top: -250%;
+      left: 10%;
+      width: 120%; /* 圆形的宽度 */
+      height: 320%; /* 圆形的高度，和宽度相同以创建圆形 */
+    }
+    .triangle{
+      top: -25%;
+      left: -75%;
+      width: 210% ;/* 可调整大小 */
+      height: 130%;/* 保持和宽度一样 */
+      z-index: -10;
+      transform: rotate(-45deg);
+      transform-origin: center;
+    }
+    .red_rectangle{
+      width: 130%;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 350px) {
+      .textwrapper {
+          font-size: 20px; /* 在更小的屏幕上使用更小的字体大小 */
+      }
+      .title1{
+        font-size: 60px;
+        margin-bottom: auto;
+        
+      }
+      .title2{
+        font-size: 60px;
+        margin-bottom: auto;
+      }
+      .title3{
+        font-size: 60px;
+      }
+
+      .body{
+        flex-direction: column;
+      }
+      .qq{
+        width: 100vw;
+        height: 50vh;
+      }
+      .divv{
+        width: 100vw;
+        height: 50vh;
+      }
+      .overlap1{
+        width: 65%;
+        left: 17.5%;
+        
+      }
+      .overlap2{
+        width: 65%;
+        left: 17.5%;
+        
+      }
+      .overlap3{
+        width: 65%;
+        left: 17.5%
+      }
+      .frame{
+        position: absolute;
+        bottom: -1%;
+        width: 50%; 
+        height: 30%;
+        left: 50%;
+      }
+
+
+      .red_rectangle{
+        width: 120%;
+      }
   }
 
 

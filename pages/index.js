@@ -10,12 +10,15 @@ function Home() {
     <div className={hellocss.body}>
       
       <div className={hellocss.qq}>
-        <div className={hellocss.circle}></div>
-        <div className={hellocss.triangle}></div>
-        <div className={hellocss.title1}>WELCOME</div>
-        <div className={hellocss.title2}>TO</div>
-        <div className={hellocss.title3}>MY WEB</div>
-        <div className={hellocss.red_rectangle}></div>
+        <div className={hellocss.title1}>WELCOME
+          <div className={hellocss.circle}></div>
+        </div>
+        <div className={hellocss.title2}>TO
+          <div className={hellocss.triangle}></div>
+        </div>
+        <div className={hellocss.title3}>MY WEB
+          <div className={hellocss.red_rectangle}></div>
+        </div>
         
       </div>
 
