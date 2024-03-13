@@ -2,13 +2,14 @@ import styles from '../styles/aboutme.module.css'
 import React from "react";
 import Button from '@mui/material/Button';
 import Link from "next/link";
+import Image from 'next/image';
 
 
 function Aboutme() {
     return (
       <div className={styles.body}>
         <div className={styles.piczone}>
-            <img src='https://i.ibb.co/RjzH6Bp/S-3981318.jpg'className={styles.mypic} ></img>
+            <Image src='https://i.ibb.co/RjzH6Bp/S-3981318.jpg'className={styles.mypic} >
             <div className={styles.rectangle}></div>
         </div>
 
