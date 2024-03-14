@@ -31,7 +31,7 @@ function Aboutme() {
     return (
         <div className={styles.body}>
             <div className={styles.piczone}>
-                <Image src='https://i.ibb.co/RjzH6Bp/S-3981318.jpg' alt="Profile" className={styles.mypic} />
+                <img src='https://i.ibb.co/RjzH6Bp/S-3981318.jpg' alt="Profile" className={styles.mypic} />
                 <div className={styles.rectangle}></div>
             </div>
 

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
-.body{
+.body {
     background-color: #EBDEBE;
     display: flex;
     flex-direction: row;
@@ -11,52 +11,85 @@
     top: 0;
     left: 0;
     overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.piczone{
+/* 添加動畫 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.piczone {
     height: 100vh;
     width: 40vw;
     top: 0;
     left: 0;
     display: flex;
-    align-items: center; /* 垂直置中 */
-    
-
+    align-items: center;
+    animation: fadeInFromLeft 1s ease-in-out;
+    animation-delay: 0.7s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
-
-.mypic{
-    position: absolute;
-    max-height: 600px;
-    max-width: 32vw;
-    left: 5%;
-    z-index: 10;
-    
-    
-    border-radius: 50px;
+/* 添加從左側滑入的動畫 */
+@keyframes fadeInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-.introzone{
+/* ... 其他 CSS 樣式 ... */
+
+.introzone {
     flex-direction: column;
     position: relative;
     height: 100vh;
     width: 60vw;
     display: flex;
-    align-items: center; /* 垂直置中 */
+    align-items: center;
     margin-right: 16px;
-    
+    animation: fadeInFromRight 1s ease-in-out;
+    animation-delay: 0.7s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
-.intro{
+/* 添加從右側滑入的動畫 */
+@keyframes fadeInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.intro {
     height: 50%;
     font-family: 'Jockey One';
     font-size: 2em;
-    position: relative;
-    top: 50%;
-
+    position: absolute;
+    top: 55%;
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 1.7s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
-.rectangle{
+.rectangle {
     position: absolute;
     bottom: 0%;
     left: 0%;
@@ -64,24 +97,64 @@
     height: 15vh;
     background-color: #c40606;
     z-index: 0;
+    overflow: hidden;
+    animation: slideInFromBottom 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
-.circle{
+
+/* 添加從底部滑入的動畫 */
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.circle {
     position: absolute;
     right: -20%;
     top: -25%;
-    width: 60vh; /* 圆形的宽度 */
-    height: 60vh; /* 圆形的高度，和宽度相同以创建圆形 */
-    border-radius: 50%; /* 创建圆形 */
-    background-color: #F1BC00; /* 圆形的填充颜色 */
+    width: 60vh;
+    height: 60vh;
+    border-radius: 50%;
+    background-color: #F1BC00;
+    animation: slideInFromTop 1s ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: 0;
 }
 
-.cat{
+/* 添加從頂部滑入的動畫 */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.cat {
     width: 15%;
     position: absolute;
-    top: 42%;
+    top: 46%;
     left: 0%;
-    
 }
+
+.mypic {
+    position: absolute;
+    max-height: 600px;
+    max-width: 32vw;
+    left: 5%;
+    z-index: 20;
+    border-radius: 50px;
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
 
 @media screen and (max-width: 850px) {
     .body{
@@ -96,6 +169,7 @@
         display: flex;
         align-items: center; /* 垂直置中 */
         justify-content: center;  /* 水平置中 */
+        z-index: 10;
     
     }
     .introzone{
@@ -110,24 +184,24 @@
         font-family: 'Jockey One';
         font-size: 1.2em;
         position: relative;
-        top: 60%;
+        top: 70%;
         display: flex;
         align-items: center; /* 垂直置中 */
         justify-content: center;  /* 水平置中 */
-        margin-left: 20px;
-        margin-right: 18px;
+        margin-left: 25px;
+        margin-right: 25px;
     
     }
     
     .mypic{
         transform: translate(-50%, -50%);
-        top: 65%;
+        top: 80%;
         left: 50%;
         margin-top: 10px;
         max-height: 450px;
         max-width: 70vw;
         display: flex;
-        z-index: 10;
+        z-index: 20;
         border-radius: 50px;
     }
     .circle{
@@ -138,20 +212,22 @@
         height: 40vh; /* 圆形的高度，和宽度相同以创建圆形 */
         border-radius: 50%; /* 创建圆形 */
         background-color: #F1BC00; /* 圆形的填充颜色 */
+        z-index: 10;
     }
     .rectangle{
         position: absolute;
-        bottom: -160%;
+        bottom: -170%;
         left: 0;
         width: 100vw;
         height: 15vh;
         background-color: #c40606;
         z-index: 0;
+        overflow: hidden;
     }
     .cat{
         width: 20%;
         position: absolute;
-        top: 63%;
+        top: 70%;
         left: 0%;
         
     }
