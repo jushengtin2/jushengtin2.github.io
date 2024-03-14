@@ -176,6 +176,7 @@
         height: 60vh;
         width: 100vw;
         position: relative;
+        z-index: 20;
 
     }
 
@@ -184,12 +185,13 @@
         font-family: 'Jockey One';
         font-size: 1.2em;
         position: relative;
-        top: 70%;
+        top: 77.5%;
         display: flex;
         align-items: center; /* 垂直置中 */
         justify-content: center;  /* 水平置中 */
         margin-left: 25px;
         margin-right: 25px;
+        
     
     }
     

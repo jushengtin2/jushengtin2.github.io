@@ -32,7 +32,8 @@ function Aboutme() {
         <div className={styles.body}>
             <div className={styles.piczone}>
                 <img src='https://i.ibb.co/RjzH6Bp/S-3981318.jpg' alt="Profile" className={styles.mypic} />
-                <div className={styles.rectangle}></div>
+                
+                <div className={styles.circle}></div>
             </div>
 
             <div className={styles.introzone}>
@@ -46,7 +47,7 @@ function Aboutme() {
                 <div className={styles.intro}>
                     Hello!!! Im Justin, 23yo from Kaohsiung Taiwan 🇹🇼 and currently pursuing a Masters degree in Information Management at National Taiwan University, Im a member of Professor Nanyi s research lab and currently researching HCI (Human-Computer Interaction) 🤜🏼🤛🏼 ❤️.
                 </div>
-                <div className={styles.circle}></div>
+                
             </div>
         </div>
     );

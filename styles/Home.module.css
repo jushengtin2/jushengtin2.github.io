@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
-
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 .body {
     background-color: #EBDEBE;
     display: flex;
@@ -12,6 +19,7 @@
     top: 0;
     left: 0;
     overflow: hidden;
+    animation: fadeIn 0.2s ease-in-out;
   }
 
 .qq {
@@ -33,8 +41,10 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+
   
 }
+
 
 .title1 {
     position: absolute; 
@@ -43,6 +53,7 @@
     transform: translateY(-50%);
     font-size: 95px; 
     z-index: 20;
+  
 }
 .title2 {
   position: absolute; 
@@ -51,6 +62,7 @@
   transform: translateY(-50%);
   font-size: 95px; 
   z-index: 15;
+
 }
 .title3 {
   position: absolute; 
@@ -59,6 +71,7 @@
   transform: translateY(-50%);
   font-size: 95px; 
   z-index: 15;
+
 }
 
 
@@ -74,7 +87,26 @@
   border-radius: 50px;
 } 
 
-  
+@keyframes fadeInFrombottom {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+@keyframes fadeInFromtop {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0%);
+      opacity: 1;
+  }
+}
 .overlap1 {
     background-color: #b0aeae;
     height: 27%;
@@ -85,6 +117,10 @@
     top: 4.75%;
     border-radius: 50px;
     margin-bottom: auto;
+    animation: fadeInFrombottom 1s ease-in-out;
+    animation-delay: 0.7s;
+    opacity: 0;
+    animation-fill-mode: forwards;
   
   }
 
@@ -98,6 +134,10 @@
     top: 0;
     border-radius: 50px;
     margin-bottom: auto;
+    animation: fadeInFrombottom 1s ease-in-out;
+    animation-delay: 1.0s;
+    opacity: 0;
+    animation-fill-mode: forwards;
   }
   
   .overlap3 {
@@ -109,6 +149,10 @@
     left: 5%;
     bottom: 4.75%;
     border-radius: 50px;
+    animation: fadeInFrombottom 1s ease-in-out;
+    animation-delay: 1.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
     
     
   }
@@ -151,40 +195,74 @@
     width: 100%;
   }
 
-  .circle{
-    position: absolute;
-    top: -250%;
-    left: 10%;
-    width: 150%; /* 圆形的宽度 */
-    height: 390%; /* 圆形的高度，和宽度相同以创建圆形 */
-    border-radius: 50%; /* 创建圆形 */
-    background-color: #F1BC00; /* 圆形的填充颜色 */
-    z-index: -10;
+  @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
-  }
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%) rotate(-45deg);;
+    }
+    100% {
+        transform: translateX(0) rotate(-45deg);;
+    }
+}
 
-  .triangle{
-    position: absolute;
-    top: -50%;
-    left: -100%;
-    width: 235% ;/* 可调整大小 */
-    height: 150%;/* 保持和宽度一样 */
-    background-color: #0368BD; /* 三角形的颜色 */
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transform: rotate(-45deg);
-    transform-origin: center;
-    z-index: -10;
-  }
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
-  .red_rectangle{
+.red_rectangle {
     position: absolute;
     top: 47%;
     left: 3%;
-    width: 160%; /* 长条形的宽度 */
-    height: 30%; /* 长条形的高度 */
-    background-color: #c40606; 
+    width: 160%;
+    height: 30%;
+    background-color: #c40606;
     z-index: -10;
-  }
+    animation: slideInFromLeft 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.circle {
+    position: absolute;
+    top: -250%;
+    left: 10%;
+    width: 150%;
+    height: 390%;
+    border-radius: 50%;
+    background-color: #F1BC00;
+    z-index: -10;
+    animation: slideInFromTop 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.triangle {
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 235%;
+    height: 150%;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    background-color: #0368BD;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    
+    z-index: -10;
+    animation: slideInFromRight 1s ease-in-out;
+    
+}
+
 
 
 @media screen and (max-width: 850px) {
