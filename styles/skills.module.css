@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+.body {
+    background-color: #EBDEBE;
+    width:100vw ;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden; 
+    /*animation: fadeIn 1s ease-in-out;*/
+}
+
+/* 添加動畫 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.slide_container{
+    width: 60vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 垂直置中 */
+    justify-content: center;  /* 水平置中 */
+  }
+
+.introzone{
+    position: relative;
+    width: 40vw;
+    height: 75vh;
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    justify-content: center;  /* 水平置中 */
+
+}
+
+.skillzone{
+    width: 100vw;
+    height: 70vh;
+    position: absolute;
+    top: 75vh;
+    left: 0;
+    background-color: EBDEBE;
+    font-family: 'Jockey One';
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.slideshow {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    
+  }
+
+.slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+    position: relative;
+  }
+  
+.slide {
+    display: inline-block;
+    height: 450px ;
+    width: 100%;
+    border-radius: 70px;
+  }
+  
+.slideshowDots {
+    text-align: center;
+  }
+  
+.slideshowDot {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 20px 7px 0px;
+    background-color: #c4c4c4;
+  }
+
+.slideshowDot.active {
+    background-color: #3a393b;
+  }
+
+
+
+.intro {
+    height: 50%;
+    font-family: 'Jockey One';
+    font-size: 2em;
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.devzone{
+    width: 50vw;
+    display: flex;
+    justify-content: center;  /* 水平置中 */
+}
+
+.musiczone{
+    width: 50vw;
+    display: flex;
+    justify-content: center;  /* 水平置中 */
+}

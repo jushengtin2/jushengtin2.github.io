@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.1 ease-in-out;
 }
 
 /* 添加動畫 */
