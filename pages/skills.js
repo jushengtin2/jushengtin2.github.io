@@ -3,6 +3,8 @@ import React from "react";
 import Button from '@mui/material/Button';
 import Link from "next/link";
 import Image from 'next/image';
+import { CSSTransition } from 'react-transition-group';
+
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
@@ -11,12 +13,24 @@ function Aboutme() {
 
     const [index, setIndex] = React.useState(0);
     const isFirstRender = React.useRef(true);
-    React.useEffect(() => {
+    const [showList, setShowList] = React.useState(false);
+    const [showList2, setShowList2] = React.useState(false);
+
+    const toggleList = () => {
+          setShowList(!showList);
+        };
+    const toggleList2 = () => {
+      setShowList2(!showList2);
+    };
+
+    React.useEffect(() => {  /* 這是讓照片的幻燈片第一次不要１跳３*/ 
 
       if (isFirstRender.current) {
         isFirstRender.current = false;
         return;
       }
+
+    
 
       const timeoutId = setTimeout(
         () =>
@@ -49,24 +63,76 @@ function Aboutme() {
 
         <div className={styles.introzone}>
           <div className={styles.intro}>
-            I'm skilled in in the field of information management (like text mining and website development), as well as jazz drumming and Japanese language. Here are the development projects I've worked on and the performances I've been a part of in the past.
+            Im skilled in in the field of information management as well as drumming and Japanese language. Here are some funny pics in the past.
           </div>
         </div>
         
         <div className={styles.skillzone}>
 
           <div className={styles.devzone}>
-                123
+            <Button variant="contained" className={styles.button1} onClick={toggleList}>
+              programming
+            </Button>
+          </div>
+
+          <div className={styles.musiczone}>
+            <Button variant="contained" className={styles.button2} onClick={toggleList2}>
+              others
+            </Button>
           </div>
           
-          <div className={styles.musiczone}>
-                456
-          </div>
+
 
 
         </div>
 
         
+
+            <CSSTransition
+              in={showList}
+              timeout={300}
+              classNames={{
+                enter: styles.projectListEnter,
+                enterActive: styles.projectListEnterActive,
+                exit: styles.projectListExit,
+                exitActive: styles.projectListExitActive,
+              }}
+              unmountOnExit>
+              
+                <div className={styles.project}>
+                  <div className={styles.project1}>1. Python</div>
+                  <div className={styles.project1}>2. C/C++</div>
+                  <div className={styles.project1}>3. HTML / CSS / JavaScript</div>
+                  <div className={styles.project1}>4. MySQL</div>
+                  <div className={styles.project1}>5. Git</div>
+                </div>
+              
+            </CSSTransition>
+
+            <CSSTransition
+              in={showList2}
+              timeout={300}
+              classNames={{
+                enter: styles.projectListEnter,
+                enterActive: styles.projectListEnterActive,
+                exit: styles.projectListExit,
+                exitActive: styles.projectListExitActive,
+              }}
+              unmountOnExit>
+              
+                
+                <div className={styles.project}>
+                  <div className={styles.project2}>1. TOEIC 900</div>
+                  <div className={styles.project2}>2. JLPT N1</div>
+                  <div className={styles.project2}>3. Figma</div>
+                </div>
+              
+            </CSSTransition>
+
+        
+
+
+
       </div>
     );
   }

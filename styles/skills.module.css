@@ -3,13 +3,13 @@
 .body {
     background-color: #EBDEBE;
     width:100vw ;
-    min-height: 100vh;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: row;
-    overflow-x: hidden; 
+    overflow: hidden; 
     /*animation: fadeIn 1s ease-in-out;*/
 }
 
@@ -22,8 +22,6 @@
         opacity: 1;
     }
 }
-
-
 
 .slide_container{
     width: 60vw;
@@ -39,14 +37,24 @@
     width: 40vw;
     height: 75vh;
     display: flex;
-    align-items: center; /* 垂直置中 */
+    top: 30%;
     justify-content: center;  /* 水平置中 */
+    padding-right: 3%;
 
+}
+.intro {
+  height: 50%;
+  font-family: 'Jockey One';
+  font-size: 2em;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .skillzone{
     width: 100vw;
-    height: 70vh;
+    height: 25vh;
     position: absolute;
     top: 75vh;
     left: 0;
@@ -99,24 +107,124 @@
 
 
 
-.intro {
-    height: 50%;
-    font-family: 'Jockey One';
-    font-size: 2em;
-    animation: fadeIn 1s ease-in-out;
-    animation-delay: 1s;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
 
 .devzone{
-    width: 50vw;
+    width: 40vw;
+    height: 20vh;
+    
+    border-radius: 75px;
+    position: relative;
+    left: 5vw;
     display: flex;
     justify-content: center;  /* 水平置中 */
+    align-items: center;
+
+
 }
 
 .musiczone{
-    width: 50vw;
+    width: 40vw;
+    height: 20vh;
+    border-radius: 75px;
+    position: relative;
+    left: 15vw;
     display: flex;
     justify-content: center;  /* 水平置中 */
+    align-items: center;
+    
 }
+
+.title1{
+  display: flex;
+  justify-content: center;  /* 水平置中 */
+  width: 100%;
+  height: 5vh;
+  
+}
+
+.title2{
+  display: flex;
+  justify-content: center;  /* 水平置中 */
+  width: 100%;
+  height: 5vh;
+}
+
+
+.project{
+  background-color: #EBDEBE;
+  height: 40vh;
+  width: 45vw;
+  font-size: 1.5em;
+  font-family: 'Jockey One';
+  overflow: hidden; 
+  position: absolute; /* 可能不需要更改，如果已经是 relative */
+  z-index: 100; /* 确保它在其他内容之上 */
+  top: 18vh; /* 根据实际布局调整 */
+  right: 1vw; /* 从右侧滑入 */
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* 水平置中 */
+  align-items: center;
+  border: 2px solid #000000;
+  
+}
+
+.projectListEnter {
+  transform: translateX(100%);
+  position: absolute; /* 或者 position: fixed; 根据需求选择 */
+  top: 18vh; /* 根据实际布局调整 */
+  right: 0; /* 从右侧滑入 */
+
+}
+
+.projectListEnterActive {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.projectListExit {
+  transform: translateX(0);
+  position: absolute; /* 保持绝对定位 */
+}
+
+.projectListExitActive {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+}
+
+
+.project1{
+  
+  left: 30%;
+  width: 70%;
+  font-size: 1.2em;
+  
+}
+.project2{
+  
+  left: 30%;
+  width: 70%;
+  font-size: 1.2em;
+}
+
+.button1{
+  background-color: #8f8f8f;
+  font-family: 'Jockey One';
+  font-size: 100%;
+  color: black;
+  width: 80%;
+  height: 60%;
+  border-radius: 35px;
+}
+.button2{
+  background-color: #8f8f8f;
+  font-family: 'Jockey One';
+  font-size: 100%;
+  color: black;
+  width: 80%;
+  height: 60%;
+  border-radius: 35px;
+}
+
+
