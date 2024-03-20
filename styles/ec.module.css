@@ -154,7 +154,7 @@
   background-color: #EBDEBE;
   height: 40vh;
   width: 45vw;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: 'Jockey One';
   overflow: hidden; 
   position: absolute; /* 可能不需要更改，如果已经是 relative */
@@ -198,9 +198,16 @@
   
   left: 30%;
   width: 70%;
-  font-size: 1.1em;
+  font-size: 1.2em;
   
 }
+.project2{
+  
+  left: 30%;
+  width: 70%;
+  font-size: 1.2em;
+}
+
 .button1{
   background-color: #8f8f8f;
   font-family: 'Jockey One';
@@ -280,7 +287,7 @@
   background-color: #EBDEBE;
   height: 30vh;
   width: 95vw;
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: 'Jockey One';
   overflow: hidden; 
   position: absolute; /* 可能不需要更改，如果已经是 relative */

@@ -45,7 +45,7 @@ function Aboutme() {
                     </div>
                 </div>
                 <div className={styles.intro}>
-                    Hello!!! Im Justin, 23yo from Kaohsiung Taiwan 🇹🇼 and currently pursuing a Masters degree in Information Management at National Taiwan University, Im a member of Professor Nanyi s research lab and currently researching HCI (Human-Computer Interaction) 🤜🏼🤛🏼 ❤️.
+                    Hello!!! Im Justin, 23yo from Kaohsiung Taiwan 🇹🇼 and currently pursuing a Masters degree in Information Management at National Taiwan University, Im a member of Professor Nanyis research lab, I also love music a lot and i play drum for 10ys so if you wanna make friend with me just send me message directly.
                 </div>
                 
             </div>

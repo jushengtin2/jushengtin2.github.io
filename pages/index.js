@@ -41,11 +41,11 @@ function Home() {
             </Button>
             </Link> 
 
-          <Link href="/collections" className={hellocss.overlap3}>
+          <Link href="/extracurricular" className={hellocss.overlap3}>
             <Button className={hellocss.button_img}>
               <img className={hellocss.rectangle}  src="assets/labstudents.jpeg" /> 
               <div className={hellocss.frame}> 
-                  <div className={hellocss.textwrapper}>COLLECTIONS</div> 
+                  <div className={hellocss.textwrapper}>EXTRACURRICULAR</div> 
               </div>
             </Button>
           </Link>
