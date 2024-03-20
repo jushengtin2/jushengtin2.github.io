@@ -6,9 +6,11 @@ import Image from 'next/image';
 import { CSSTransition } from 'react-transition-group';
 
 
-const image1 = "/images/IMG_3859.jpg";
-const image2 = "/images/IMG_5011.JPG";
-const image3 = "/images/IMG_7336_Original.jpg";
+const slideImages = [
+  "https://i.ibb.co/tCXwnY5/IMG-3859.jpg",
+  "https://i.ibb.co/28bVq4v/IMG-5011.jpg",
+  "https://i.ibb.co/F3cpRCg/IMG-7336-Original.jpg",
+];
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
@@ -58,17 +60,15 @@ function Aboutme() {
         <div className={styles.slide_container}>
           <div className={styles.slideshow}>
             <div className={styles.slideshowSlider} style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
-              {/* 直接展示三个图片 */}
-              <div className={styles.slide} style={{ backgroundImage: `url(${image1})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
-              <div className={styles.slide} style={{ backgroundImage: `url(${image2})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
-              <div className={styles.slide} style={{ backgroundImage: `url(${image3})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+              {slideImages.map((imageSrc, idx) => (
+                <img src={imageSrc} alt={`Slide ${idx}`} className={styles.slide} key={idx} />
+              ))}
             </div>
           </div>
           <div className={styles.slideshowDots}>
-            {/* 手动创建三个导航点 */}
-            <div className={`${styles.slideshowDot} ${index === 0 ? styles.active : ''}`} onClick={() => setIndex(0)}></div>
-            <div className={`${styles.slideshowDot} ${index === 1 ? styles.active : ''}`} onClick={() => setIndex(1)}></div>
-            <div className={`${styles.slideshowDot} ${index === 2 ? styles.active : ''}`} onClick={() => setIndex(2)}></div>
+            {slideImages.map((_, idx) => (
+              <div key={idx} className={`${styles.slideshowDot} ${index === idx ? styles.active : ''}`} onClick={() => setIndex(idx)}></div>
+            ))}
           </div>
         </div>
 
