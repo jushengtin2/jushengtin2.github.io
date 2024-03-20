@@ -6,9 +6,9 @@ import Image from 'next/image';
 import { CSSTransition } from 'react-transition-group';
 
 const slideImages = [
-  "public/IMG_4598.jpg",
-  "public/IMG_4615.jpg",
-  "public/IMG_3286.JPG",
+  "../public/IMG_4598.jpg",
+  "../public/IMG_4615.jpg",
+  "../public/IMG_3286.JPG",
 ];
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
