@@ -6,9 +6,9 @@ import Image from 'next/image';
 import { CSSTransition } from 'react-transition-group';
 
 const slideImages = [
-  "/images/IMG_4598.jpg",
-  "/images/IMG_4615.jpg",
-  "/images/IMG_3286.JPG",
+  "https://i.ibb.co/GvjTwfT/IMG-4598.jpg",
+  "https://i.ibb.co/DVxmTQL/IMG-4615.jpg",
+  "https://i.ibb.co/F6ytb24/IMG-3286.jpg",
 ];
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
@@ -57,13 +57,13 @@ function Aboutme() {
           <div className={styles.slideshow}>
             <div className={styles.slideshowSlider} style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
               {slideImages.map((imageSrc, idx) => (
-                <div className={styles.slide} key={idx} style={{ backgroundImage: `url(${imageSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' }}/>
+                <img src={imageSrc} alt={`Slide ${idx}`} className={styles.slide} key={idx} />
               ))}
             </div>
           </div>
           <div className={styles.slideshowDots}>
             {slideImages.map((_, idx) => (
-              <div key={idx} className={`${styles.slideshowDot} ${index === idx ? styles.active : ''}`}></div>
+              <div key={idx} className={`${styles.slideshowDot} ${index === idx ? styles.active : ''}`} onClick={() => setIndex(idx)}></div>
             ))}
           </div>
         </div>
