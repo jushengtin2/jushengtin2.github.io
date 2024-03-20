@@ -7,8 +7,8 @@ import { CSSTransition } from 'react-transition-group';
 
 
 const slideImages = [
-  "https://i.ibb.co/tCXwnY5/IMG-3859.jpg",
-  "https://i.ibb.co/28bVq4v/IMG-5011.jpg",
+  "public/images/IMG_3859.jpg",
+  "public/images/IMG_5011.JPG",
   "https://i.ibb.co/F3cpRCg/IMG-7336-Original.jpg",
 ];
 
