@@ -25,7 +25,7 @@ function Home() {
 
         <Link href="/aboutme"className={hellocss.overlap1} >
           <Button className={hellocss.button_img}>
-            <img className={hellocss.rectangle}  src="assets/lab.jpeg" />
+            
             <div className={hellocss.frame}>
               <div className={hellocss.textwrapper}>About me</div>
             </div>
@@ -34,7 +34,7 @@ function Home() {
 
         <Link href="/skills" className={hellocss.overlap2}> 
             <Button className={hellocss.button_img}>
-              <img className={hellocss.rectangle}  src="assets/nanyi.jpeg" />
+              
               <div className={hellocss.frame}>
                 <div className={hellocss.textwrapper}>SKILLS</div>
               </div> 
@@ -43,7 +43,7 @@ function Home() {
 
           <Link href="/extracurricular" className={hellocss.overlap3}>
             <Button className={hellocss.button_img}>
-              <img className={hellocss.rectangle}  src="assets/labstudents.jpeg" /> 
+               
               <div className={hellocss.frame}> 
                   <div className={hellocss.textwrapper}>EXTRACURRICULAR</div> 
               </div>
