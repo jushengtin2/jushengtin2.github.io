@@ -5,9 +5,10 @@ import Link from "next/link";
 import Image from 'next/image';
 import { CSSTransition } from 'react-transition-group';
 
+
 const slideImages = [
-  "https://i.ibb.co/tCXwnY5/IMG-3859.jpg",
   "https://i.ibb.co/28bVq4v/IMG-5011.jpg",
+  "https://i.ibb.co/tCXwnY5/IMG-3859.jpg",
   "https://i.ibb.co/NCfRcbZ/IMG-7336-Original.jpg",
   
 ];
